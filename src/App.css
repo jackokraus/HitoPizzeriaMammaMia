@@ -60,3 +60,7 @@
 .fut{
   background-color:rgb(44, 86, 202);
 }
+.registere{
+ display: grid;
+  grid-template-columns: 10px 1fr; /* label  */ 
+}
