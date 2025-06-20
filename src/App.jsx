@@ -14,8 +14,9 @@ function App() {
     <>
       <Navbar/>
       <Register/>
-      {/*<Home/>*/}
       <Login/>
+      <Home/>
+     
       <Footer/>
       
     </>

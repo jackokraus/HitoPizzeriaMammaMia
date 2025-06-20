@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { pizzas } from './pizzas';
 
 const Navbar = () => {
     const token = false;
+    const totalPrice = pizzas.reduce((sum, pizza) => sum + pizza.price, 0);
   return (
     <div>
       <nav className="navbar  navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -23,7 +24,7 @@ const Navbar = () => {
           <a className="nav-link active" >{token ? 'Logout': 'Register'}</a>
         </li>
       </ul>
-      <button>Total $25.000</button>
+      <button><h2>Total: ${totalPrice}</h2></button>
     </div>
   </div>
 </nav>

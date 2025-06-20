@@ -27,6 +27,7 @@
   height: 220px;
   margin:10px;
   
+  
 }
 .card-img {
   width: 100%;
@@ -45,7 +46,7 @@
   display: block;
   align-content: center;
 }
-.carrrs{
+.carrs{
   display: flex;
   flex-wrap: wrap;
   border-style: solid;
@@ -63,4 +64,12 @@
 .registere{
  display: grid;
   grid-template-columns: 10px 1fr; /* label  */ 
+}
+
+.carto {
+  display: grid;
+  
+  gap: 20px;
+  justify-items: center; /* centers content inside each grid cell */
+  padding: 20px;
 }

@@ -1,28 +1,38 @@
 import React from 'react';
+import { pizzas } from './pizzas';
 
-const CardPizza = (props) => {
+const CardPizza = () => {
   return (
-   <div className="carrs">
-    <div className="card" >
-    <img src={props.img} alt="Card visual" className="card-img" />
-  <div className="card-body">
-    <h5 className="card-title">{props.name}</h5>
-    <hr className="card-hr" />
-    <h6 className="card-subtitle mb-2 text-body-secondary">Ingredientes :🍕 {props.ingredients}</h6>
-      <hr className="card-hr" />
-    <p className="card-text">Precio : ${props.price}</p>
-    <button style={{ borderRadius: '4px', padding: '1px 2px',marginInline:'30px'}}>
-  Ver mas
-</button>
-    <button style={{ borderRadius: '4px', padding: '1px 2px',marginInline:'30px'}}>
-  Anadir
-</button>
-  </div>
-</div>
+    <div className="carrs">
 
 
-</div>
+      {pizzas.map((pizza) => (
+        <div
+          className="card"
+          key={pizza.id}
+
+        >
+          <img src={pizza.img} alt={pizza.name} width="200" />
+          <div className="card-body">
+            <h5 className="card-title">{pizza.name}</h5>
+            <hr className="card-hr" />
+            <div className="card-subtitle mb-2 text-body-secondary">
+              <h6>Ingredientes:</h6>
+              <ul>
+                {pizza.ingredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                ))}
+              </ul>
+            </div>
+            <hr className="card-hr" />
+            <p className="card-text">Precio: ${pizza.price}</p>
+
+            <button style={{ borderRadius: '4px', padding: '4px 8px' }}>Ver más</button>
+            <button style={{ borderRadius: '4px', padding: '4px 8px' }}>Añadir</button>
+          </div>
+        </div>
+
+      ))}
+    </div>
   );
-}
-
-export default CardPizza;
+}; export default CardPizza;
